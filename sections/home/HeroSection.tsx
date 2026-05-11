@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
@@ -40,12 +41,10 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
         >
-          <button className="group relative px-8 py-4 overflow-hidden border border-cresight-graphite bg-transparent text-cresight-white uppercase tracking-widest text-xs font-semibold transition-colors duration-300">
-            <div className="absolute inset-0 w-full h-full bg-cresight-white origin-bottom transform scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100 z-0"></div>
-            <span className="relative z-10 group-hover:text-cresight-black transition-colors duration-300">
-              Discover Our Work
-            </span>
-          </button>
+          <Link href="#work" className="group relative text-cresight-white uppercase tracking-widest text-xs font-semibold pb-1 inline-block">
+            Discover Our Work
+            <span className="absolute left-0 bottom-0 w-full h-[1px] bg-cresight-white scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100 group-hover:origin-left"></span>
+          </Link>
         </motion.div>
       </div>
     </section>

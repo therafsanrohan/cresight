@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function PhilosophySection() {
   return (
-    <section className="w-full py-32 md:py-48 bg-cresight-white text-cresight-black">
+    <section id="about" className="w-full py-32 md:py-48 bg-cresight-white text-cresight-black">
       <div className="container mx-auto px-6 md:px-12 flex flex-col items-center text-center">
         <p className="text-cresight-gray text-xs uppercase tracking-widest mb-12 font-semibold">
           How We Think

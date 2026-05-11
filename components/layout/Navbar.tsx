@@ -1,16 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
 
 const navLinks = [
-  { name: "Work", href: "/work" },
-  { name: "Services", href: "/services" },
-  { name: "About", href: "/about" },
-  { name: "Journal", href: "/journal" },
+  { name: "Work", href: "#work" },
+  { name: "Services", href: "#services" },
+  { name: "About", href: "#about" },
 ];
 
 export default function Navbar() {
@@ -66,10 +65,11 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/contact"
-              className="px-5 py-2.5 bg-cresight-white text-cresight-black text-sm uppercase tracking-wider font-semibold rounded-none hover:bg-cresight-gray transition-colors duration-200"
+              href="#contact"
+              className="group relative text-cresight-white text-xs uppercase tracking-widest font-semibold pb-1"
             >
               Contact Us
+              <span className="absolute left-0 bottom-0 w-full h-[1px] bg-cresight-white scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100 group-hover:origin-left"></span>
             </Link>
           </div>
 
@@ -93,38 +93,44 @@ export default function Navbar() {
         }}
         className="fixed inset-0 z-30 bg-cresight-black flex flex-col justify-center items-center"
       >
-        <div className="flex flex-col space-y-8 items-center">
-          {navLinks.map((link, i) => (
+        <div className="container mx-auto px-6 h-full flex flex-col justify-center">
+          <div className="flex flex-col space-y-6 md:space-y-10">
+            {navLinks.map((link, i) => (
+              <motion.div
+                key={link.name}
+                variants={{
+                  open: { y: 0, opacity: 1, transition: { delay: i * 0.1 + 0.2, duration: 0.5, ease: "easeOut" } },
+                  closed: { y: 40, opacity: 0, transition: { duration: 0.3 } },
+                }}
+                className="overflow-hidden"
+              >
+                <Link
+                  href={link.href}
+                  className="group relative inline-block text-cresight-white text-5xl md:text-7xl uppercase tracking-tighter font-light hover:text-cresight-gray transition-colors duration-300"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span className="relative z-10">{link.name}</span>
+                </Link>
+              </motion.div>
+            ))}
             <motion.div
-              key={link.name}
               variants={{
-                open: { y: 0, opacity: 1, transition: { delay: i * 0.1 } },
+                open: { y: 0, opacity: 1, transition: { delay: navLinks.length * 0.1 + 0.3, duration: 0.5 } },
                 closed: { y: 20, opacity: 0 },
               }}
+              className="pt-8 mt-8 border-t border-cresight-graphite/50 w-full max-w-sm"
             >
+              <span className="block text-xs text-cresight-gray uppercase tracking-widest mb-4">Start a project</span>
               <Link
-                href={link.href}
-                className="text-cresight-white text-4xl uppercase tracking-widest font-light"
+                href="#contact"
+                className="group relative inline-flex items-center text-cresight-white text-2xl uppercase tracking-widest font-light"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {link.name}
+                Contact Us
+                <span className="ml-4 w-12 h-[1px] bg-cresight-white transform origin-left transition-transform duration-300 group-hover:scale-x-150"></span>
               </Link>
             </motion.div>
-          ))}
-          <motion.div
-            variants={{
-              open: { y: 0, opacity: 1, transition: { delay: navLinks.length * 0.1 } },
-              closed: { y: 20, opacity: 0 },
-            }}
-          >
-            <Link
-              href="/contact"
-              className="mt-8 px-8 py-4 bg-cresight-white text-cresight-black text-xl uppercase tracking-wider font-semibold"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact Us
-            </Link>
-          </motion.div>
+          </div>
         </div>
       </motion.div>
     </>

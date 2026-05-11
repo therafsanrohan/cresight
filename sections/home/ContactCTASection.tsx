@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function ContactCTASection() {
   return (
-    <section className="w-full py-48 bg-cresight-white text-cresight-black flex flex-col items-center justify-center text-center">
+    <section id="contact" className="w-full py-48 bg-cresight-white text-cresight-black flex flex-col items-center justify-center text-center">
       <div className="container mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -23,10 +23,11 @@ export default function ContactCTASection() {
           
           <Link
             href="/contact"
-            className="group inline-flex items-center space-x-4 border-b-2 border-cresight-black pb-2 text-xl md:text-2xl font-semibold uppercase tracking-widest hover:text-cresight-gray hover:border-cresight-gray transition-colors duration-300"
+            className="group relative inline-flex items-center space-x-4 pb-2 text-xl md:text-2xl font-semibold uppercase tracking-widest text-cresight-black"
           >
             <span>Get in touch</span>
             <ArrowRight className="transform group-hover:translate-x-2 transition-transform duration-300" />
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-cresight-black scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100 group-hover:origin-left"></span>
           </Link>
         </motion.div>
       </div>

@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050505;
-  --foreground: #F5F5F3;
-  --color-black: #050505;
-  --color-white: #F5F5F3;
+  --background: #0a0a0a;
+  --foreground: #f7f7f5;
+  --color-black: #0a0a0a;
+  --color-white: #f7f7f5;
   --color-gray: #CFCFCF;
   --color-graphite: #1B1B1B;
 }
@@ -16,13 +16,13 @@
   --color-cresight-white: var(--color-white);
   --color-cresight-gray: var(--color-gray);
   --color-cresight-graphite: var(--color-graphite);
-  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: var(--font-poppins), sans-serif;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -41,17 +41,20 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #0a0a0a;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #1B1B1B;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #CFCFCF;
 }
 
 ::selection {
-  background: #F5F5F3;
-  color: #050505;
+  background: #f7f7f5;
+  color: #0a0a0a;
 }

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 const projects = [
@@ -33,7 +34,7 @@ const projects = [
 
 export default function FeaturedWorkSection() {
   return (
-    <section className="w-full py-32 bg-cresight-black">
+    <section id="work" className="w-full py-32 bg-cresight-black">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex justify-between items-end mb-20 border-b border-cresight-graphite pb-8">
           <h2 className="text-4xl md:text-6xl font-light uppercase tracking-tight">
@@ -59,10 +60,12 @@ export default function FeaturedWorkSection() {
               className={`group cursor-pointer ${index % 2 !== 0 ? "md:mt-32" : ""}`}
             >
               <div className="relative overflow-hidden aspect-[4/5] bg-cresight-graphite mb-6">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700"></div>
               </div>
