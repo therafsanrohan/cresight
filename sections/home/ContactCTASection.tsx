@@ -21,14 +21,27 @@ export default function ContactCTASection() {
             Ready to elevate your brand to the global stage? We partner with ambitious leaders to build premium digital experiences.
           </p>
           
-          <Link
-            href="/contact"
-            className="group relative inline-flex items-center space-x-4 pb-2 text-xl md:text-2xl font-semibold uppercase tracking-widest text-cresight-black"
-          >
-            <span>Get in touch</span>
-            <ArrowRight className="transform group-hover:translate-x-2 transition-transform duration-300" />
-            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-cresight-black scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100 group-hover:origin-left"></span>
-          </Link>
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12">
+            <a
+              href="mailto:info@cre-sight.com"
+              className="group relative inline-flex items-center space-x-4 pb-2 text-xl md:text-2xl font-semibold uppercase tracking-widest text-cresight-black"
+            >
+              <span>info@cre-sight.com</span>
+              <ArrowRight className="transform group-hover:translate-x-2 transition-transform duration-300" />
+              <span className="absolute left-0 bottom-0 w-full h-[2px] bg-cresight-black scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100 group-hover:origin-left"></span>
+            </a>
+
+            <a
+              href="https://wa.me/8801328822216"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center space-x-4 pb-2 text-xl md:text-2xl font-semibold uppercase tracking-widest text-cresight-black"
+            >
+              <span>WhatsApp Us</span>
+              <ArrowRight className="transform group-hover:translate-x-2 transition-transform duration-300" />
+              <span className="absolute left-0 bottom-0 w-full h-[2px] bg-cresight-black scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100 group-hover:origin-left"></span>
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

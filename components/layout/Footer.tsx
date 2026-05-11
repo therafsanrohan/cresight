@@ -13,8 +13,13 @@ export default function Footer() {
             <p className="text-cresight-gray font-light text-sm leading-relaxed mb-8">
               A premium creative agency shaping the digital narrative of global brands through strategic intelligence and minimal design.
             </p>
-            <a href="mailto:hello@cresight.com" className="group relative inline-flex items-center text-cresight-white uppercase tracking-widest text-xs font-semibold">
-              hello@cresight.com
+            <a href="mailto:info@cre-sight.com" className="group relative inline-flex items-center text-cresight-white uppercase tracking-widest text-xs font-semibold mb-3">
+              info@cre-sight.com
+              <span className="absolute left-0 bottom-0 w-full h-[1px] bg-cresight-white scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100 group-hover:origin-left"></span>
+            </a>
+            <br />
+            <a href="https://wa.me/8801328822216" target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center text-cresight-white uppercase tracking-widest text-xs font-semibold">
+              +880 1328-822216 (WhatsApp)
               <span className="absolute left-0 bottom-0 w-full h-[1px] bg-cresight-white scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100 group-hover:origin-left"></span>
             </a>
           </div>

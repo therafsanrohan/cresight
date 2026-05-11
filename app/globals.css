@@ -27,6 +27,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (pointer: fine) {
+  body, body *, a, button {
+    cursor: none !important;
+  }
+}
+
 /* Noise overlay */
 .bg-noise {
   position: fixed;
