@@ -18,14 +18,14 @@ export default function ServicesSection() {
   return (
     <section id="services" className="w-full py-32 md:py-48 bg-cresight-black text-cresight-white overflow-hidden relative">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-start mb-24 md:mb-32">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-20 md:mb-40">
           <div className="max-w-md">
             <motion.span 
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-cresight-gray text-sm tracking-wide mb-6 block font-light"
+              className="text-cresight-gray text-[10px] uppercase tracking-[0.4em] mb-8 block font-semibold"
             >
               What we do
             </motion.span>
@@ -34,18 +34,18 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-5xl md:text-7xl font-light tracking-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-light tracking-tighter uppercase"
             >
               Services
             </motion.h2>
           </div>
-          <div className="max-w-lg mt-8 md:mt-12">
+          <div className="max-w-xl mt-12 md:mt-16">
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl md:text-4xl text-cresight-gray font-light leading-relaxed"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-cresight-gray font-light leading-[1.3] tracking-tight"
             >
               Comprehensive services to boost your presence and achieve impactful results.
             </motion.p>
@@ -67,10 +67,10 @@ export default function ServicesSection() {
               <div className="absolute inset-0 bg-cresight-graphite/10 scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500 ease-out z-0"></div>
 
               <div className="flex items-center space-x-6 md:space-x-16 z-10 relative">
-                <span className={`text-sm md:text-lg transition-colors duration-500 font-light ${hoveredIndex === index ? 'text-cresight-white' : 'text-cresight-gray'}`}>
+                <span className={`text-[10px] md:text-xs uppercase tracking-widest transition-colors duration-500 font-medium ${hoveredIndex === index ? 'text-cresight-white' : 'text-cresight-gray'}`}>
                   0{index + 1}
                 </span>
-                <h3 className={`text-4xl md:text-6xl lg:text-7xl font-light transition-all duration-500 transform ${hoveredIndex === index ? 'text-cresight-white translate-x-4 md:translate-x-8' : 'text-cresight-gray'}`}>
+                <h3 className={`text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-light transition-all duration-500 transform tracking-tight uppercase ${hoveredIndex === index ? 'text-cresight-white translate-x-2 md:translate-x-8' : 'text-cresight-gray'}`}>
                   {service}
                 </h3>
               </div>

@@ -47,10 +47,14 @@ export default function Navbar() {
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
           <Link
             href="/"
-            className="text-cresight-white text-xl md:text-2xl font-bold tracking-widest uppercase relative z-50"
+            className="relative z-50 flex items-center h-8"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Cresight
+            <img 
+              src="/assets/logos/Cresight.svg" 
+              alt="Cresight Logo" 
+              className="h-full w-auto brightness-0 invert" 
+            />
           </Link>
 
           {/* Desktop Nav */}

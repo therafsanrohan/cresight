@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
@@ -36,18 +36,7 @@ export default function FeaturedWorkSection() {
   return (
     <section id="work" className="w-full py-32 bg-cresight-black">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="flex justify-between items-end mb-20 border-b border-cresight-graphite pb-8">
-          <h2 className="text-4xl md:text-6xl font-light uppercase tracking-tight">
-            Selected <br /> <span className="font-bold">Works</span>
-          </h2>
-          <Link
-            href="/work"
-            className="group flex items-center space-x-2 text-cresight-gray hover:text-cresight-white uppercase tracking-widest text-xs font-semibold transition-colors duration-300 pb-2"
-          >
-            <span>View All</span>
-            <ArrowUpRight size={16} className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-          </Link>
-        </div>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
           {projects.map((project, index) => (
