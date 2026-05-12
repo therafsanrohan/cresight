@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     default: "CRESIGHT | Premium Creative Agency",
   },
   description: "A world-class premium creative agency. Minimal. Sophisticated. Confident. Creative. Strategic. Expensive.",
+  icons: {
+    icon: "/assets/favicon/favicon.ico.svg",
+  },
 };
 
 export default function RootLayout({

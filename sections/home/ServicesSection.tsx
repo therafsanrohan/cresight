@@ -76,10 +76,10 @@ export default function ServicesSection() {
               </div>
               
               <div className="relative z-10 pr-2 md:pr-8">
-                <div className={`p-4 rounded-full border transition-all duration-500 ${hoveredIndex === index ? 'border-cresight-white bg-cresight-white text-cresight-black' : 'border-cresight-graphite text-cresight-gray bg-transparent'}`}>
+                <div className={`p-3 md:p-4 rounded-full border transition-all duration-500 ${hoveredIndex === index ? 'border-cresight-white bg-cresight-white text-cresight-black' : 'border-cresight-graphite text-cresight-gray bg-transparent'}`}>
                   <ArrowRight 
                     strokeWidth={1.5}
-                    className={`w-6 h-6 md:w-8 md:h-8 transform transition-transform duration-500 ${hoveredIndex === index ? '-rotate-45' : 'rotate-0'}`}
+                    className={`w-5 h-5 md:w-8 md:h-8 transform transition-transform duration-500 ${hoveredIndex === index ? '-rotate-45' : 'rotate-0'}`}
                   />
                 </div>
               </div>

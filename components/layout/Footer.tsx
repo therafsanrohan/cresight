@@ -7,6 +7,13 @@ export default function Footer() {
       <div className="container mx-auto px-6 md:px-12 flex flex-col h-full">
         <div className="flex flex-col md:flex-row justify-between items-start mb-24 md:mb-32">
           <div className="mb-16 md:mb-0 max-w-sm">
+            <Link href="/" className="inline-block mb-12 h-8">
+              <img 
+                src="/assets/logos/Cresight.svg" 
+                alt="Cresight Logo" 
+                className="h-full w-auto brightness-0 invert" 
+              />
+            </Link>
             <h3 className="text-xl font-light uppercase tracking-widest mb-8 text-cresight-white">
               Based in Global
             </h3>
@@ -23,12 +30,10 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-16 md:gap-32 text-[10px] uppercase tracking-[0.2em] font-medium">
+          <div className="grid grid-cols-2 gap-16 md:gap-32 text-[10px] uppercase tracking-[0.2em] font-medium mt-12 md:mt-20">
             <div className="flex flex-col space-y-6">
               <h4 className="text-cresight-gray mb-2 font-light opacity-50 tracking-widest">Navigation</h4>
-              <Link href="#work" className="hover:text-cresight-gray transition-colors flex items-center group">
-                Work <ArrowUpRight size={10} className="ml-1 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
-              </Link>
+
               <Link href="#services" className="hover:text-cresight-gray transition-colors flex items-center group">
                 Services <ArrowUpRight size={10} className="ml-1 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
               </Link>
@@ -51,12 +56,12 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Huge logo instead of text */}
+        {/* Huge logo watermark */}
         <div className="w-full border-b border-cresight-graphite pb-12 mb-8 flex items-center justify-center pointer-events-none select-none overflow-hidden">
           <img 
             src="/assets/logos/Cresight.svg" 
             alt="Cresight" 
-            className="w-full h-auto opacity-[0.03] scale-[1.2] brightness-0 invert" 
+            className="w-full max-w-6xl h-auto opacity-[0.04] scale-[1.1] brightness-0 invert" 
           />
         </div>
 
