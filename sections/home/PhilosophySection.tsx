@@ -47,10 +47,10 @@ export default function PhilosophySection() {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <h2 className="flex flex-col gap-2 md:gap-4">
-              <span className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tighter uppercase leading-none flex items-center">
+              <span className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] font-black tracking-tighter uppercase leading-none flex items-center">
                 We Work <span className="ml-4 md:ml-8 text-cresight-black lowercase italic font-light">with</span>
               </span>
-              <div className="text-5xl sm:text-8xl md:text-9xl lg:text-[12rem] leading-none">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-[7rem] leading-none">
                 <RotatingText />
               </div>
             </h2>
@@ -83,7 +83,7 @@ export default function PhilosophySection() {
                 FOR BRANDS.
               </h3>
             </div>
-            <div className="space-y-8 text-lg md:text-xl text-cresight-graphite font-light leading-relaxed max-w-xl border-l border-cresight-gray/30 pl-8 ml-2">
+            <div className="space-y-8 text-base md:text-lg text-cresight-graphite font-light leading-relaxed max-w-xl border-l border-cresight-gray/30 pl-8 ml-2">
               <p>
                 We believe creativity should move brands forward, not just decorate them. That belief drives us to explore new ideas, industries, and perspectives while collaborating with organizations ready to grow, adapt, and challenge conventions.
               </p>
@@ -109,7 +109,7 @@ export default function PhilosophySection() {
                 THAT MATTER.
               </h3>
             </div>
-            <div className="space-y-8 text-lg md:text-xl text-cresight-graphite font-light leading-relaxed max-w-xl border-l border-cresight-gray/30 pl-8 ml-2">
+            <div className="space-y-8 text-base md:text-lg text-cresight-graphite font-light leading-relaxed max-w-xl border-l border-cresight-gray/30 pl-8 ml-2">
               <p>
                 Impact comes from communicating with clarity and purpose. We help brands uncover what makes them unique and transform their vision into stories and visual experiences that audiences connect with and remember.
               </p>

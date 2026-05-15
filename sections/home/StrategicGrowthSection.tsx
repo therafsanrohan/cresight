@@ -16,10 +16,8 @@ export default function StrategicGrowthSection() {
           >
             <div className="flex items-baseline gap-4 mb-6">
               <span className="text-sm font-bold tracking-[0.3em] text-cresight-gray">03</span>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9]">
-                DESIGNED <br /> 
-                <span className="text-cresight-gray outline-text">TO MOVE</span> <br /> 
-                BRANDS FORWARD
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-cresight-white">
+                DESIGNED TO MOVE BRANDS FORWARD
               </h2>
             </div>
           </motion.div>
@@ -39,18 +37,43 @@ export default function StrategicGrowthSection() {
                 From brand design to multimedia storytelling and creative campaigns, we create solutions that inspire audiences to engage, respond, and act. We also empower growing businesses with <span className="text-cresight-white font-medium">modern tools</span> and strategies for sustainable digital growth.
               </p>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="lg:pt-24"
-            >
+ 
+            <div className="lg:pt-24">
               <p className="text-2xl md:text-3xl lg:text-4xl text-cresight-white font-light italic leading-tight tracking-tighter border-t border-cresight-gray/20 pt-12">
-                Everything we do is purpose-driven, helping brands stay <span className="text-cresight-gray">distinctive</span>, <span className="text-cresight-gray">relevant</span>, and <span className="text-cresight-white font-bold">forward-moving</span>.
+                Everything we do is purpose-driven, helping brands{" "}
+                <span className="text-cresight-white not-italic">to Stay </span>
+                <motion.span 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="text-cresight-gray"
+                >
+                  Distinctive
+                </motion.span>
+                <span className="text-cresight-white not-italic">, </span>
+                <motion.span 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="text-cresight-gray"
+                >
+                  Relevant
+                </motion.span>
+                <span className="text-cresight-white not-italic">, and </span>
+                <motion.span 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                  className="text-cresight-white font-bold italic"
+                >
+                  Forward-Moving
+                </motion.span>
+                .
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

@@ -97,8 +97,8 @@ export default function HeroSection() {
             blending design, culture, and strategy to build integrated communication experiences for brands, 
             businesses, and people across the right platforms and moments.
           </p>
-          <div className="text-3xl md:text-4xl lg:text-6xl mb-4">
-            <Typewriter />
+          <div className="text-3xl md:text-4xl lg:text-6xl mb-4 font-bold uppercase tracking-tight text-cresight-white">
+            To Stay <Typewriter />
           </div>
         </motion.div>
       </div>

@@ -99,4 +99,22 @@ Founder & Creative Lead, Creatiancy
 - **Web:** [www.rafsanrohan.com](http://www.rafsanrohan.com)
 
 ---
+
+### 8. Cybersecurity & Data Protection
+To ensure a secure environment and protect the intellectual property of the agency, the following measures have been implemented:
+
+#### 8.1 Source Code Protection
+- **Production Source Map Disabling:** original TypeScript source files are hidden from the browser's developer tools in production environments. This prevents unauthorized users from inspecting or copying the original codebase logic.
+- **Header Obfuscation:** The `X-Powered-By: Next.js` header has been removed to reduce the surface area for targeted framework attacks.
+
+#### 8.2 Network & Communication Security
+- **Strict-Transport-Security (HSTS):** Enforces secure (HTTPS) connections for a period of two years, including all subdomains.
+- **Content Security Policy (CSP):** A robust policy is in place to prevent Cross-Site Scripting (XSS) and data injection attacks by strictly defining trusted script and style sources.
+- **Clickjacking Protection:** `X-Frame-Options` is set to `SAMEORIGIN` to prevent the site from being embedded in malicious iframes.
+
+#### 8.3 Data Integrity
+- **X-Content-Type-Options:** Prevents the browser from "sniffing" the MIME type, forcing it to stick to the declared content-type and mitigating MIME-type confusion attacks.
+- **Referrer-Policy:** Configured to `origin-when-cross-origin` to protect user privacy while navigating between internal and external links.
+
+---
 © 2026 Creatiancy. All rights reserved.

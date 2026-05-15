@@ -15,9 +15,9 @@ export default function TrustSection() {
           className="text-center mb-20"
         >
           <span className="text-[10px] uppercase tracking-[0.6em] text-cresight-gray mb-6 block font-bold">Partnerships</span>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter leading-tight max-w-4xl mx-auto">
-            BRANDS THAT <span className="text-cresight-gray outline-text italic">PARTNER</span> WITH US <br className="hidden md:block" /> 
-            TO MOVE <span className="text-cresight-white underline decoration-1 underline-offset-8">FORWARD</span>.
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter leading-tight max-w-4xl mx-auto text-cresight-white">
+            BRANDS THAT <span className="italic">PARTNER</span> WITH US <br className="hidden md:block" /> 
+            TO MOVE <span className="underline decoration-1 underline-offset-8">FORWARD</span>.
           </h2>
         </motion.div>
         
