@@ -35,9 +35,10 @@ CRESIGHT is a high-end digital landing page designed to showcase a premium creat
 - Dynamic staggered text reveal on initial load.
 - Integrated brand pillar typewriter cycling (Distinctive, Relevant, Forward-Moving).
 
-#### 3.2 Dynamic Client Management
-- The website uses a centralized data structure for client logos located in `@/lib/clients.ts`.
-- Future updates to the "Trust" or "Philosophy" sections can be managed by modifying this array without touching core component logic.
+#### 3.2 Automated Client Management
+- The website features an automated discovery system for client logos.
+- Images placed in the `/public/clients/` directory are automatically detected and displayed in the "Partnerships" section.
+- Filenames are automatically converted to human-readable titles (e.g., `walton_logo.svg` becomes "Walton Logo").
 
 #### 3.3 Philosophy & Strategy Blocks
 - Sequential numbering (01, 02, 03) with a unified editorial design pattern.
@@ -66,7 +67,7 @@ CRESIGHT is a high-end digital landing page designed to showcase a premium creat
 ### 5. Maintenance & Updates
 #### 5.1 Content Updates
 - **Text Content:** Managed directly within the respective files in `sections/home/`.
-- **Client Logos:** Add SVG files to `public/assets/logos/` and update `lib/clients.ts`.
+- **Client Logos:** Simply add image files (SVG, PNG, JPG) to the `/public/clients/` folder. The website will automatically update upon the next page refresh. No code or configuration changes are required.
 
 #### 5.2 Technical Maintenance
 - Ensure `npm update` is run periodically to maintain security patches.

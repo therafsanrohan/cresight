@@ -1,9 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { clients } from "@/lib/clients";
+import { useState, useEffect } from "react";
+
+interface Client {
+  name: string;
+  logo: string;
+}
 
 export default function TrustSection() {
+  const [clients, setClients] = useState<Client[]>([]);
+
+  useEffect(() => {
+    const fetchClients = async () => {
+      try {
+        const response = await fetch('/api/clients');
+        const data = await response.json();
+        setClients(data);
+      } catch (error) {
+        console.error("Failed to fetch clients:", error);
+      }
+    };
+
+    fetchClients();
+  }, []);
+
   return (
     <section className="w-full py-32 bg-cresight-black border-t border-b border-cresight-graphite overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 flex flex-col items-center">
@@ -22,22 +43,26 @@ export default function TrustSection() {
         </motion.div>
         
         <div className="w-full flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-          {clients.map((client) => (
-            <motion.div 
-              key={client.name} 
-              whileHover={{ scale: 1.1, opacity: 1 }}
-              className="flex items-center justify-center transition-all duration-500"
-            >
-              {client.logo ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={client.logo} alt={client.name} className="h-6 md:h-10 w-auto object-contain" />
-              ) : (
-                <div className="text-lg md:text-xl font-bold tracking-[0.2em] uppercase text-cresight-white/60 hover:text-cresight-white">
-                  {client.name}
-                </div>
-              )}
-            </motion.div>
-          ))}
+          {clients.length > 0 ? (
+            clients.map((client) => (
+              <motion.div 
+                key={client.name} 
+                whileHover={{ scale: 1.1, opacity: 1 }}
+                className="flex items-center justify-center transition-all duration-500"
+              >
+                {client.logo ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={client.logo} alt={client.name} className="h-6 md:h-10 w-auto object-contain" />
+                ) : (
+                  <div className="text-lg md:text-xl font-bold tracking-[0.2em] uppercase text-cresight-white/60 hover:text-cresight-white">
+                    {client.name}
+                  </div>
+                )}
+              </motion.div>
+            ))
+          ) : (
+            <div className="text-cresight-gray/50 italic text-sm">Loading partnerships...</div>
+          )}
         </div>
       </div>
       <style jsx>{`
