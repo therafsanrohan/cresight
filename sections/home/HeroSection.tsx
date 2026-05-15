@@ -62,7 +62,6 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center text-center">
-        {/* Title with staggered lines - Final Creative Refinement */}
         <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter text-cresight-white max-w-7xl mb-20 leading-[0.95] uppercase">
           {[
             { text: "We Blend Design,", weight: "font-black" },
@@ -116,7 +115,6 @@ export default function HeroSection() {
         }
       `}</style>
       
-      {/* Simple, Non-sticky Scroll Indicator */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.4 }}

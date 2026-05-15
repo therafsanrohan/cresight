@@ -39,7 +39,6 @@ export default function PhilosophySection() {
   return (
     <section id="philosophy" className="w-full py-32 md:py-56 bg-cresight-white text-cresight-black overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
-        {/* Heroic "WE WORK WITH" Title - Two Line Layout for Better Impact */}
         <div className="mb-48 relative">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
