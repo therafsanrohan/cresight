@@ -25,7 +25,7 @@ CRESIGHT is a high-end digital landing page designed to showcase a premium creat
 
 #### 2.2 Core Design Principles
 - **Monochrome Palette:** Strict adherence to the CRESIGHT identity (Black #050505, White #F5F5F3, Gray #CFCFCF).
-- **Fluid Typography:** Implementation of `clamp()` and `vw` units for consistent visual impact across all viewport sizes.
+- **Shrinking UI (Fluid Design):** Implementation of `clamp()` and `vw` units for typography, padding, and margins. This ensures the UI scales smoothly and proportionally ("shrinks") from ultra-wide monitors down to mobile devices, maintaining design integrity at every pixel.
 - **Micro-interactions:** Staggered text reveals, custom cursors, and viewport-aware scroll animations.
 
 ---
@@ -45,7 +45,8 @@ CRESIGHT is a high-end digital landing page designed to showcase a premium creat
 - Responsive handling of long-form headings to ensure zero layout shift.
 
 #### 3.4 Contact & Lead Generation
-- Integrated contact CTA with physical studio address and direct communication channels.
+- **Responsive CTA:** Integrated contact CTA with designer-consistent typography (`font-black`) and fluid scaling.
+- **Dynamic Content:** Physical studio address and direct communication channels with interactive hover states.
 
 ---
 

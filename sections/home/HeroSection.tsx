@@ -54,7 +54,7 @@ export default function HeroSection() {
   const titlePart4 = "and Culturally Relevant.";
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-cresight-black py-24 md:py-32">
+    <section className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-cresight-black py-[10vh] md:py-[15vh]">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-cresight-white/[0.03] to-transparent" />
         <div className="absolute top-[15%] left-[5%] w-[40%] h-[40%] bg-cresight-white/[0.04] rounded-full blur-[140px]" />
@@ -62,7 +62,7 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center text-center">
-        <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter text-cresight-white max-w-7xl mb-20 leading-[0.95] uppercase">
+        <div className="text-[clamp(2.5rem,8vw,10rem)] font-black tracking-tighter text-cresight-white max-w-7xl mb-[clamp(3rem,8vw,6rem)] leading-[0.9] uppercase">
           {[
             { text: "We Blend Design,", weight: "font-black" },
             { text: "Culture, and Experiences", weight: "font-light italic text-cresight-gray" },
@@ -92,12 +92,12 @@ export default function HeroSection() {
           transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
           className="max-w-4xl"
         >
-          <p className="text-base md:text-xl lg:text-2xl text-cresight-gray font-light leading-relaxed mb-12 max-w-3xl mx-auto">
+          <p className="text-[clamp(1rem,2vw,1.5rem)] text-cresight-gray font-light leading-relaxed mb-12 max-w-3xl mx-auto">
             Cresight creates <span className="text-cresight-white font-medium italic">growth through stories</span>, 
             blending design, culture, and strategy to build integrated communication experiences for brands, 
             businesses, and people across the right platforms and moments.
           </p>
-          <div className="text-3xl md:text-4xl lg:text-6xl mb-4 font-bold uppercase tracking-tight text-cresight-white">
+          <div className="text-[clamp(1.5rem,4vw,5rem)] mb-4 font-bold uppercase tracking-tight text-cresight-white">
             To Stay <Typewriter />
           </div>
         </motion.div>

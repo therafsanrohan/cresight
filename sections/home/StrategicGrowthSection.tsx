@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function StrategicGrowthSection() {
   return (
-    <section className="w-full py-32 md:py-48 bg-cresight-black text-cresight-white overflow-hidden">
+    <section className="w-full py-[10vh] md:py-[20vh] bg-cresight-black text-cresight-white overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-6xl">
           <motion.div 
@@ -16,7 +16,7 @@ export default function StrategicGrowthSection() {
           >
             <div className="flex items-baseline gap-4 mb-6">
               <span className="text-sm font-bold tracking-[0.3em] text-cresight-gray">03</span>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-cresight-white">
+              <h2 className="text-[clamp(2rem,6vw,5rem)] font-black uppercase tracking-tighter leading-[0.9] text-cresight-white">
                 DESIGNED TO MOVE BRANDS FORWARD
               </h2>
             </div>

@@ -37,9 +37,9 @@ function RotatingText() {
 
 export default function PhilosophySection() {
   return (
-    <section id="philosophy" className="w-full py-32 md:py-56 bg-cresight-white text-cresight-black overflow-hidden">
+    <section id="philosophy" className="w-full py-[10vh] md:py-[20vh] bg-cresight-white text-cresight-black overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="mb-48 relative">
+        <div className="mb-[clamp(4rem,15vw,12rem)] relative">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -47,10 +47,10 @@ export default function PhilosophySection() {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <h2 className="flex flex-col gap-2 md:gap-4">
-              <span className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] font-black tracking-tighter uppercase leading-none flex items-center">
+              <span className="text-[clamp(2.5rem,8vw,7rem)] font-black tracking-tighter uppercase leading-none flex items-center">
                 We Work <span className="ml-4 md:ml-8 text-cresight-black lowercase italic font-light">with</span>
               </span>
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-[7rem] leading-none">
+              <div className="text-[clamp(3.5rem,10vw,9rem)] leading-none">
                 <RotatingText />
               </div>
             </h2>
