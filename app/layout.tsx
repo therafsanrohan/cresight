@@ -12,11 +12,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s | CRESIGHT",
-    default: "CRESIGHT | Premium Creative Agency",
-  },
-  description: "A world-class premium creative agency. Minimal. Sophisticated. Confident. Creative. Strategic. Expensive.",
+  title: "Cresight – Creating #GrowthThroughStories",
+  description: "Cresight creates growth through stories, blending design, culture, and strategy to build integrated communication experiences for brands, businesses, and people across the right platforms and moments.",
   icons: {
     icon: "/assets/favicon/favicon.ico.svg",
   },
@@ -29,6 +26,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} h-full antialiased scroll-smooth`}>
+      <head>
+        {/* Google Tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1FFQF6NTV" />
+        <script
+          id="google-analytics"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-M1FFQF6NTV');
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-cresight-black text-cresight-white font-sans">
         <CustomCursor />
         <div className="bg-noise" />
