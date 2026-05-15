@@ -47,14 +47,14 @@ export default function TrustSection() {
             clients.map((client) => (
               <motion.div 
                 key={client.name} 
-                whileHover={{ scale: 1.1, opacity: 1 }}
-                className="flex items-center justify-center transition-all duration-500"
+                whileHover={{ scale: 1.05, opacity: 1 }}
+                className="flex items-center justify-center transition-all duration-500 bg-white p-4 md:p-6 rounded-md shadow-lg"
               >
                 {client.logo ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={client.logo} alt={client.name} className="h-6 md:h-10 w-auto object-contain" />
+                  <img src={client.logo} alt={client.name} className="h-8 md:h-12 w-auto object-contain" />
                 ) : (
-                  <div className="text-lg md:text-xl font-bold tracking-[0.2em] uppercase text-cresight-white/60 hover:text-cresight-white">
+                  <div className="text-lg md:text-xl font-bold tracking-[0.2em] uppercase text-cresight-black">
                     {client.name}
                   </div>
                 )}
