@@ -24,7 +24,9 @@ function RotatingText() {
           animate={{ y: "0%", opacity: 1 }}
           exit={{ y: "-100%", opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="block whitespace-nowrap text-cresight-white bg-cresight-black px-3 md:px-8 py-1 md:py-2 font-black italic tracking-tighter text-[0.8em]"
+          className={`block whitespace-nowrap text-cresight-white bg-cresight-black px-3 md:px-10 py-2 md:py-4 font-black italic tracking-tighter ${
+            clients[index] === "GOVERNMENT AGENCIES" ? "text-[0.6em] sm:text-[0.7em] md:text-[0.8em]" : ""
+          }`}
         >
           {clients[index]}
         </motion.span>
@@ -37,19 +39,21 @@ export default function PhilosophySection() {
   return (
     <section id="philosophy" className="w-full py-32 md:py-56 bg-cresight-white text-cresight-black overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
-        {/* Heroic "WE WORK WITH" Title */}
+        {/* Heroic "WE WORK WITH" Title - Two Line Layout for Better Impact */}
         <div className="mb-48 relative">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col gap-2 md:gap-4"
           >
-            <h2 className="text-4xl sm:text-7xl md:text-9xl lg:text-[11rem] font-black tracking-tighter uppercase leading-[0.85] flex flex-wrap items-center">
-              <span className="mr-4 md:mr-6">WE WORK</span>
-              <span className="mr-4 md:mr-6 text-cresight-gray/30 outline-text">WITH</span>
-              <RotatingText />
+            <h2 className="flex flex-col gap-2 md:gap-4">
+              <span className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tighter uppercase leading-none flex items-center">
+                We Work <span className="ml-4 md:ml-8 text-cresight-black lowercase italic font-light">with</span>
+              </span>
+              <div className="text-5xl sm:text-8xl md:text-9xl lg:text-[12rem] leading-none">
+                <RotatingText />
+              </div>
             </h2>
           </motion.div>
           

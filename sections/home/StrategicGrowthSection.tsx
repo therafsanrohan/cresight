@@ -24,19 +24,19 @@ export default function StrategicGrowthSection() {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-start">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="space-y-8 text-lg md:text-xl text-cresight-gray font-light leading-relaxed border-l border-cresight-gray/20 pl-8 ml-2"
+              className="space-y-12 text-lg md:text-xl lg:text-2xl text-cresight-gray font-light leading-[1.6] border-l border-cresight-gray/10 pl-10 ml-2"
             >
               <p>
-                Every brand begins with an idea, but value is created when the right audience experiences it. Through thoughtful design, strategic thinking, and immersive digital experiences, we shape marketing communications into meaningful engagement.
+                Every brand begins with an idea, but value is created when the right audience experiences it. Through <span className="text-cresight-white font-medium italic">thoughtful design</span>, strategic thinking, and immersive digital experiences, we shape marketing communications into meaningful engagement.
               </p>
               <p>
-                From brand design to multimedia storytelling and creative campaigns, we create solutions that inspire audiences to engage, respond, and act. We also empower growing businesses with modern tools and strategies for sustainable digital growth.
+                From brand design to multimedia storytelling and creative campaigns, we create solutions that inspire audiences to engage, respond, and act. We also empower growing businesses with <span className="text-cresight-white font-medium">modern tools</span> and strategies for sustainable digital growth.
               </p>
             </motion.div>
 
@@ -45,10 +45,10 @@ export default function StrategicGrowthSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="flex flex-col justify-end"
+              className="lg:pt-24"
             >
-              <p className="text-xl md:text-2xl text-cresight-white font-medium italic border-l-2 border-cresight-white pl-8">
-                Everything we do is purpose-driven, helping brands stay distinctive, relevant, and forward-moving.
+              <p className="text-2xl md:text-3xl lg:text-4xl text-cresight-white font-light italic leading-tight tracking-tighter border-t border-cresight-gray/20 pt-12">
+                Everything we do is purpose-driven, helping brands stay <span className="text-cresight-gray">distinctive</span>, <span className="text-cresight-gray">relevant</span>, and <span className="text-cresight-white font-bold">forward-moving</span>.
               </p>
             </motion.div>
           </div>

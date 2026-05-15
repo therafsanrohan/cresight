@@ -62,21 +62,26 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center text-center">
-        {/* Title with staggered lines - More Creative & Readable */}
-        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter text-cresight-white max-w-6xl mb-16 leading-[1.05] uppercase">
-          {[titlePart1, titlePart2, titlePart3, titlePart4].map((line, lineIndex) => (
-            <div key={lineIndex} className="overflow-hidden">
+        {/* Title with staggered lines - Final Creative Refinement */}
+        <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter text-cresight-white max-w-7xl mb-20 leading-[0.95] uppercase">
+          {[
+            { text: "We Blend Design,", weight: "font-black" },
+            { text: "Culture, and Experiences", weight: "font-light italic text-cresight-gray" },
+            { text: "to Create Work That Feels", weight: "font-black" },
+            { text: "Natural, Engaging, and Relevant.", weight: "font-bold outline-text text-cresight-gray" }
+          ].map((line, lineIndex) => (
+            <div key={lineIndex} className="overflow-hidden py-1">
               <motion.div
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
+                initial={{ y: "110%", rotate: 2 }}
+                animate={{ y: 0, rotate: 0 }}
                 transition={{ 
-                  duration: 1, 
-                  delay: lineIndex * 0.15, 
+                  duration: 1.2, 
+                  delay: lineIndex * 0.2, 
                   ease: [0.16, 1, 0.3, 1] 
                 }}
-                className={lineIndex % 2 === 1 ? "text-cresight-gray/40 outline-text" : ""}
+                className={`${line.weight}`}
               >
-                {line}
+                {line.text}
               </motion.div>
             </div>
           ))}
