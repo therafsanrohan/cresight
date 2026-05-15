@@ -42,7 +42,7 @@ export default function TrustSection() {
           </h2>
         </motion.div>
         
-        <div className="w-full flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-80 hover:opacity-100 transition-opacity duration-700">
+        <div className="w-full flex flex-wrap justify-center items-center gap-12 md:gap-32 opacity-80 hover:opacity-100 transition-opacity duration-700">
           {clients.length > 0 ? (
             clients.map((client) => (
               <motion.div 
@@ -54,14 +54,14 @@ export default function TrustSection() {
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={client.logo} alt={client.name} className="h-10 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-500" />
                 ) : (
-                  <div className="text-lg md:text-xl font-bold tracking-[0.2em] uppercase text-cresight-black/60 hover:text-cresight-black">
+                  <div className="text-lg md:text-xl font-bold tracking-[0.2em] uppercase text-cresight-black">
                     {client.name}
                   </div>
                 )}
               </motion.div>
             ))
           ) : (
-            <div className="text-cresight-black/30 italic text-sm">Loading partnerships...</div>
+            <div className="text-cresight-gray italic text-sm">Loading partnerships...</div>
           )}
         </div>
       </div>
