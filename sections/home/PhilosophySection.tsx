@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const clients = ["BRANDS", "GROUPS", "ORGANIZATIONS", "NGOS", "GOVERNMENT AGENCIES"];
+const clients = ["BRANDS", "GROUPS", "ORGANIZATIONS", "NGOs", "GOVERNMENT AGENCIES"];
 
 function RotatingText() {
   const [index, setIndex] = useState(0);
