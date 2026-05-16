@@ -47,10 +47,10 @@ export default function PhilosophySection() {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <h2 className="flex flex-col gap-2 md:gap-4">
-              <span className="text-[clamp(2.5rem,8vw,7rem)] font-black tracking-tighter uppercase leading-none flex items-center">
+              <span className="text-[clamp(2rem,6vw,5rem)] font-black tracking-tighter uppercase leading-none flex items-center">
                 We Work <span className="ml-4 md:ml-8 text-cresight-black lowercase italic font-light">with</span>
               </span>
-              <div className="text-[clamp(3.5rem,10vw,9rem)] leading-none">
+              <div className="text-[clamp(2.5rem,8vw,6.5rem)] leading-none">
                 <RotatingText />
               </div>
             </h2>
