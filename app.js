@@ -4,14 +4,16 @@ const next = require('next')
 const app = next({ dev: false })
 const handle = app.getRequestHandler()
 
-app.prepare().then(() => {
-  createServer((req, res) => {
-    handle(req, res)
-  }).listen(process.env.PORT || 3000, (err) => {
-    if (err) throw err
-    console.log('> Ready on production')
+app.prepare()
+  .then(() => {
+    createServer((req, res) => {
+      handle(req, res)
+    }).listen(process.env.PORT, () => {
+      console.log('> Website is live and ready')
+    })
   })
-}).catch((ex) => {
-  console.error(ex.stack)
-  process.exit(1)
-})
+  .catch((err) => {
+    console.error('CRITICAL ERROR: Website failed to start.')
+    console.error(err)
+    process.exit(1)
+  })
