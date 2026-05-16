@@ -28,9 +28,12 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  output: "export",
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
+  images: {
+    unoptimized: true,
+  },
   async headers() {
     return [
       {

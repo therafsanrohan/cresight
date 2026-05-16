@@ -8,22 +8,14 @@ interface Client {
   logo: string;
 }
 
+const staticClients: Client[] = [
+  { name: "Partner 1", logo: "" }, // These can be text or image paths later
+  { name: "Partner 2", logo: "" },
+  { name: "Partner 3", logo: "" },
+];
+
 export default function TrustSection() {
-  const [clients, setClients] = useState<Client[]>([]);
-
-  useEffect(() => {
-    const fetchClients = async () => {
-      try {
-        const response = await fetch('/api/clients');
-        const data = await response.json();
-        setClients(data);
-      } catch (error) {
-        console.error("Failed to fetch clients:", error);
-      }
-    };
-
-    fetchClients();
-  }, []);
+  const clients = staticClients;
 
   return (
     <section className="w-full py-32 bg-cresight-white border-t border-b border-cresight-gray/20 overflow-hidden">
