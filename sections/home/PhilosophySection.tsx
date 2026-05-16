@@ -77,9 +77,9 @@ export default function PhilosophySection() {
           >
             <div className="flex items-baseline gap-4 mb-10">
               <span className="text-sm font-bold tracking-[0.3em] text-cresight-gray">01</span>
-              <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-[0.9]">
+              <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-[0.9] text-cresight-black">
                 EXPANDING <br /> 
-                <span className="text-cresight-gray outline-text">POSSIBILITIES</span> <br /> 
+                POSSIBILITIES <br /> 
                 FOR BRANDS.
               </h3>
             </div>
@@ -103,9 +103,9 @@ export default function PhilosophySection() {
           >
             <div className="flex items-baseline gap-4 mb-10">
               <span className="text-sm font-bold tracking-[0.3em] text-cresight-gray">02</span>
-              <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-[0.9]">
+              <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-[0.9] text-cresight-black">
                 SHAPING <br /> 
-                <span className="text-cresight-gray outline-text">STORIES</span> <br /> 
+                STORIES <br /> 
                 THAT MATTER.
               </h3>
             </div>
