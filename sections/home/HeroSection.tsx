@@ -62,11 +62,10 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center text-center">
-        <div className="text-[clamp(2rem,6vw,7rem)] font-black tracking-tighter text-cresight-white max-w-7xl mb-[clamp(3rem,8vw,6rem)] leading-[0.9] uppercase">
+        <div className="text-[clamp(2rem,6vw,7rem)] font-black tracking-tighter text-cresight-white max-w-7xl mb-[clamp(3rem,8vw,5rem)] leading-[0.95] uppercase">
           {[
-            { text: "We Blend Design, Culture,", weight: "font-black" },
-            { text: "and Experiences to Create Work That Feels", weight: "font-light italic text-cresight-gray" },
-            { text: "Natural, Engaging, and Relevant.", weight: "font-bold outline-text text-cresight-gray" }
+            { text: "We Blend Design, Culture, and Experiences", weight: "font-black" },
+            { text: "to Create Work That Feels Natural, Engaging, and Relevant.", weight: "font-bold text-cresight-gray" }
           ].map((line, lineIndex) => (
             <div key={lineIndex} className="overflow-hidden py-1">
               <motion.div
