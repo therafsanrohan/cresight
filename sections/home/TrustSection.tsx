@@ -8,14 +8,33 @@ interface Client {
   logo: string;
 }
 
-const staticClients: Client[] = [
-  { name: "Partner 1", logo: "" }, // These can be text or image paths later
-  { name: "Partner 2", logo: "" },
-  { name: "Partner 3", logo: "" },
+const defaultClients: Client[] = [
+  { name: "Walton", logo: "/clients/Walton_logo.svg" },
+  { name: "ACI", logo: "/clients/aci_logo.svg" },
+  { name: "bKash", logo: "/clients/bkash_logo.svg" },
+  { name: "PRAN", logo: "/clients/pran_logo.svg" },
 ];
 
 export default function TrustSection() {
-  const clients = staticClients;
+  const [clients, setClients] = useState<Client[]>(defaultClients);
+
+  useEffect(() => {
+    async function fetchClients() {
+      try {
+        const response = await fetch("/api/clients");
+        if (response.ok) {
+          const data = await response.json();
+          if (Array.isArray(data) && data.length > 0) {
+            setClients(data);
+          }
+        }
+      } catch (error) {
+        console.error("Failed to dynamically load client logos:", error);
+      }
+    }
+    fetchClients();
+  }, []);
+
 
   return (
     <section className="w-full py-32 bg-cresight-white border-t border-b border-cresight-gray/20 overflow-hidden">
